@@ -1,19 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<template id="__bundler_thumbnail" data-bg-color="#FAF8F4">
-  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-    <rect width="1200" height="800" fill="#FAF8F4"></rect>
-    <text x="600" y="420" font-family="Georgia, serif" font-size="64" fill="#8B6B4A" text-anchor="middle">Умная сказка</text>
-  </svg>
-</template>
-<helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Manrope:wght@200;300;400;500&amp;display=swap" rel="stylesheet">
@@ -30,7 +19,8 @@
     [data-rg="2"] { grid-template-columns: 1fr !important; }
   }
 </style>
-</helmet>
+</head>
+<body>
 <div style="background:#FAF8F4; color:#1F1D1A; font-family:Manrope, sans-serif; font-weight:300; -webkit-font-smoothing:antialiased; overflow-x:hidden">
 
   <header style="display:flex; justify-content:center; padding:38px 40px 0">
@@ -52,7 +42,7 @@
         <a href="https://t.me/umnaya_skazka_bot" target="_blank" rel="noopener" style="font-size:13px; letter-spacing:0.19em; text-transform:uppercase; color:#6E6759; border-bottom:1px solid rgba(110,103,89,0.35); padding-bottom:7px" style-hover="color:#1F1D1A; border-bottom:1px solid #1F1D1A">Сразу перейти в бот</a>
       </div>
     </div>
-    <img src="./child_holding_and_opening_book_202608311-mtgzgefr-n3pc.jpeg" alt="Обложка книги «Анечка и кот Василий»" style="width:100%; height:auto; display:block">
+    <img src="child_holding_and_opening_book_202608311-mtgzgefr-n3pc.jpg" alt="Обложка книги «Анечка и кот Василий»" style="width:100%; height:auto; display:block">
   </section>
 
   <section data-screen-label="Личная история" style="max-width:1280px; margin:0 auto; padding:clamp(90px,13vw,190px) clamp(24px,5vw,72px) 0">
@@ -62,7 +52,7 @@
     </div>
     <div style="max-width:38em">
       <p style="font-family:Cormorant, serif; font-style:italic; font-weight:300; font-size:clamp(28px,3vw,44px); line-height:1.32; color:#8B6B4A; margin:0 0 40px; text-wrap:pretty">«Он был для меня по-настоящему живой!»</p>
-      <video src="uploads/личная история.mp4" controls="" style="width: 100%; max-width:420px; display: block; background: #F1ECE3; object-fit: contain; margin: 0 0 40px"></video>
+      <img src="assets/hero-with-bunny.jpg" alt="Два малыша с розовым зайцем" style="width: 100%; max-width:420px; display: block; background: #F1ECE3; object-fit: contain; margin: 0 0 40px">
       <div style="display:grid; gap:26px; font-size:16px; line-height:1.85; color:#33302B">
         <p style="margin:0">В детстве у меня была любимая игрушка&nbsp;— розовый заяц. Когда мне его подарили, мама говорит, я чуть не сошла с ума от счастья. Он был как живой для меня! И когда я сейчас приезжаю к родителям, всегда его обнимаю. До сих пор :)</p>
         <p style="margin: 0; text-decoration-line: none">И именно отсюда всё началось: я написала сказку для маленькой себя&nbsp;— как будто отправила послание себе в прошлое, чтобы сделать для своего внутреннего ребёнка драгоценный подарок. Сказка была направлена на работу с моим сильным страхом&nbsp;— остаться без мамы.</p>
@@ -70,6 +60,10 @@
       </div>
     </div>
   </section>
+
+  <div style="max-width:1280px; margin:0 auto; padding:0 clamp(24px,5vw,72px); text-align:center">
+    <a href="#stoimost" style="font-size:13px; letter-spacing:0.19em; text-transform:uppercase; color:#8B6B4A; border-bottom:1px solid #8B6B4A; padding-bottom:7px" style-hover="color:#1F1D1A; border-bottom:1px solid #1F1D1A">узнать стоимость книги</a>
+  </div>
 
   <section data-screen-label="Обо мне" style="max-width:1280px; margin:0 auto; padding:clamp(90px,13vw,190px) clamp(24px,5vw,72px) 0">
     <div style="display:flex; gap:22px; align-items:baseline; margin-bottom:48px">
@@ -116,7 +110,7 @@
       </div>
       <div data-rg="2" style="display:grid; grid-template-columns:minmax(0,0.42fr) minmax(0,1fr); gap:clamp(28px,5vw,80px); border-top:1px solid #E6DFD2; padding-top:30px">
         <h3 style="font-family:Cormorant, serif; font-weight:300; font-size:clamp(24px,2.3vw,32px); line-height:1.3; margin:0"><span style="font-size:14px; letter-spacing:0.2em; color:#B09371; display:block; margin-bottom:14px">Шаг 4</span>Создаю книгу и отправляю результат</h3>
-        <p style="font-size:16px; line-height:1.85; color:#33302B; margin:0; max-width:40em">После вашего согласия приступаю к созданию книги. Отправляю готовый вариант в PDF, а если захотите сделать бумажное издание&nbsp;— версию, готовую для типографии, и пошаговую инструкцию: что сказать, что выбрать и на что посмотреть при печати.</p>
+        <p style="font-size:16px; line-height:1.85; color:#33302B; margin:0; max-width:40em">После вашего согласия приступаю к созданию книги. Отправляю готовый вариант в PDF, а если захотите сделать бумажное издание&nbsp;— подготовлю версию, готовую для типографии, и пошаговую инструкцию: что сказать, что выбрать и на что посмотреть при печати (дополнительная оплата)</p>
       </div>
     </div>
   </section>
@@ -155,6 +149,36 @@
     </div>
   </section>
 
+  <section data-screen-label="Один ребёнок — три техники" style="max-width:1280px; margin:0 auto; padding:clamp(90px,13vw,190px) clamp(24px,5vw,72px) 0">
+    <div style="text-align:center; margin-bottom:clamp(36px,4.5vw,56px)">
+      <a href="#stoimost" style="font-size:13px; letter-spacing:0.19em; text-transform:uppercase; color:#8B6B4A; border-bottom:1px solid #8B6B4A; padding-bottom:7px" style-hover="color:#1F1D1A; border-bottom:1px solid #1F1D1A">узнать стоимость книги</a>
+    </div>
+    <h2 style="font-family:Cormorant, serif; font-weight:300; font-size:clamp(30px,3.3vw,48px); line-height:1.24; margin:0 0 clamp(36px,4.5vw,56px); max-width:20em">Один ребёнок&nbsp;— <span style="font-style: italic; color: rgb(139, 107, 74);">три техники на выбор</span></h2>
+    <div data-rg="2" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,0.85fr); gap:clamp(32px,5vw,80px); align-items:center">
+      <div>
+        <div id="boy-carousel" style="position:relative; overflow:hidden; background:#F1ECE3">
+          <div id="boy-carousel-track" style="display:flex; width:100%; transition:transform 620ms cubic-bezier(0.4,0,0.2,1); transform: translateX(0%)">
+            <img src="assets/boy-original-sm.jpg" alt="Исходное фото мальчика" style="min-width:100%; aspect-ratio:3/4; object-fit:cover; display:block">
+            <img src="assets/boy-watercolor-sm.jpg" alt="Акварельная иллюстрация" style="min-width:100%; aspect-ratio:3/4; object-fit:cover; display:block">
+            <img src="assets/boy-3d-sm.jpg" alt="3D-иллюстрация" style="min-width:100%; aspect-ratio:3/4; object-fit:cover; display:block">
+            <img src="assets/boy-2d-sm.jpg" alt="2D-иллюстрация" style="min-width:100%; aspect-ratio:3/4; object-fit:cover; display:block">
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:24px; margin-top:24px">
+          <span id="boy-carousel-caption" style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#6E6759">Исходное фото</span>
+          <div style="display:flex; align-items:center; gap:22px">
+            <div id="boy-carousel-dots" style="display:flex; gap:9px"></div>
+            <div style="display:flex; gap:14px">
+              <button type="button" id="boy-carousel-prev" aria-label="Назад" style="background:none; border:none; padding:0; cursor:pointer; font-size:18px; line-height:1; color:#8B6B4A; font-family:Cormorant, serif" style-hover="color:#1F1D1A">←</button>
+              <button type="button" id="boy-carousel-next" aria-label="Вперёд" style="background:none; border:none; padding:0; cursor:pointer; font-size:18px; line-height:1; color:#8B6B4A; font-family:Cormorant, serif" style-hover="color:#1F1D1A">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="font-family:Cormorant, serif; font-weight:300; font-style:italic; font-size:clamp(22px,2.2vw,30px); line-height:1.45; color:#33302B; margin:0; text-wrap:pretty">Технику иллюстраций выбираете вы.<br>На этапе согласования покажу, как будет выглядеть именно ваш герой.</p>
+    </div>
+  </section>
+
   <section data-screen-label="Берусь не за каждый запрос" style="max-width:1280px; margin:0 auto; padding:clamp(90px,13vw,190px) clamp(24px,5vw,72px) 0">
     <div style="display:flex; gap:22px; align-items:baseline; margin-bottom:48px">
       <span style="font-family:Cormorant, serif; font-size:15px; letter-spacing:0.2em; color:#B09371">05</span>
@@ -164,6 +188,24 @@
     <div style="display:grid; gap:26px; font-size:16px; line-height:1.85; color:#33302B; max-width:38em; margin-bottom:clamp(56px,7vw,96px)">
       <p style="margin:0">Сказка&nbsp;— не универсальное решение. Если при первом общении до оплаты я пойму, что ситуация требует индивидуальной работы со специалистом&nbsp;— психологом или врачом&nbsp;— я честно об этом скажу и за работу не возьмусь. Такое уже было: я отказала одной мамочке, потому что понимала, что книга не поможет, а время и деньги будут потеряны.</p>
       <p style="margin:0">Мне важно, чтобы сказка действительно работала. Если она сейчас не даст нужного вам результата — я скажу об этом прямо и подскажу, куда обратиться.</p>
+    </div>
+
+    <div style="border-top:1px solid #E6DFD2; padding-top:clamp(48px,6vw,80px); margin-bottom:clamp(48px,6vw,80px)">
+      <h2 style="font-family:Cormorant, serif; font-weight:300; font-size:clamp(30px,3.3vw,48px); line-height:1.24; margin:0 0 clamp(40px,5vw,64px); max-width:20em; text-wrap:pretty">Примеры готовых сказок</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:clamp(28px,3.5vw,52px)">
+        <figure style="margin:0">
+          <img src="assets/book-2d-sm.jpg" alt="Экспедиция шести камней" style="width:100%; height:auto; display:block">
+          <figcaption style="margin-top:20px; font-size:14px; line-height:1.6; color:#6E6759">Пример сказки для мальчика 8 лет<br><span style="color: rgb(167, 157, 140);">формат: 2D-иллюстрация</span></figcaption>
+        </figure>
+        <figure style="margin:0">
+          <img src="assets/book-3d-sm.jpg" alt="Зайка и Леночка" style="width:100%; height:auto; display:block">
+          <figcaption style="margin-top:20px; font-size:14px; line-height:1.6; color:#6E6759">Пример сказки для девочки 2 лет<br><span style="color: rgb(167, 157, 140);">формат: 3D-иллюстрация</span></figcaption>
+        </figure>
+        <figure style="margin:0">
+          <img src="assets/book-watercolor-sm.jpg" alt="Анечка и кот Василий" style="width:100%; height:auto; display:block">
+          <figcaption style="margin-top:20px; font-size:14px; line-height:1.6; color:#6E6759">Пример сказки для девочки 5 лет<br><span style="color: rgb(167, 157, 140);">формат: акварельный стиль</span></figcaption>
+        </figure>
+      </div>
     </div>
 
     <div data-rg="2" style="display:grid; grid-template-columns:minmax(0,0.42fr) minmax(0,1fr); gap:clamp(28px,5vw,80px); border-top:1px solid #E6DFD2; padding-top:32px; margin-bottom:clamp(48px,6vw,80px)">
@@ -182,37 +224,6 @@
           <p style="font-size:16px; line-height:1.85; color:#33302B; margin:0"><span style="color:#1F1D1A">Главный герой.</span> Показываю иллюстрацию персонажа до того, как отрисованы все остальные страницы. Не похож&nbsp;— переделываю.</p>
         </div>
         <p style="font-family:Cormorant, serif; font-style:italic; font-size:clamp(20px,2vw,26px); line-height:1.5; color:#8B6B4A; margin:0">Только после вашего «да» на каждом шаге я иду дальше. Поэтому финальная книга не может стать неожиданностью.</p>
-      </div>
-    </div>
-
-    <div style="border-top:1px solid #E6DFD2; padding-top:clamp(48px,6vw,80px); margin-bottom:clamp(48px,6vw,80px)">
-      <h2 style="font-family:Cormorant, serif; font-weight:300; font-size:clamp(30px,3.3vw,48px); line-height:1.24; margin:0 0 clamp(36px,4.5vw,56px); max-width:20em">Один ребёнок&nbsp;— <span style="font-style: italic; color: rgb(139, 107, 74);">три техники на выбор</span></h2>
-      <div data-rg="2" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,0.85fr); gap:clamp(32px,5vw,80px); align-items:center">
-        <div>
-          <div style="position:relative; overflow:hidden; background:#F1ECE3" onTouchStart="{{ onTouchStart }}" onTouchEnd="{{ onTouchEnd }}">
-            <div style="display:flex; width:100%; transition:transform 620ms cubic-bezier(0.4,0,0.2,1); transform: {{ track }}">
-              <img src="assets/boy-original-sm.jpg" alt="Исходное фото мальчика" style="min-width:100%; aspect-ratio:3/4; object-fit:cover; display:block">
-              <img src="assets/boy-watercolor-sm.jpg" alt="Акварельная иллюстрация" style="min-width:100%; aspect-ratio:3/4; object-fit:cover; display:block">
-              <img src="assets/boy-3d-sm.jpg" alt="3D-иллюстрация" style="min-width:100%; aspect-ratio:3/4; object-fit:cover; display:block">
-              <img src="assets/boy-2d-sm.jpg" alt="2D-иллюстрация" style="min-width:100%; aspect-ratio:3/4; object-fit:cover; display:block">
-            </div>
-          </div>
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:24px; margin-top:24px">
-            <span style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#6E6759">{{ caption }}</span>
-            <div style="display:flex; align-items:center; gap:22px">
-              <div style="display:flex; gap:9px">
-                <sc-for list="{{ dots }}" as="dot" hint-placeholder-count="4">
-                  <button type="button" onClick="{{ dot.on }}" aria-label="Кадр" style="width:7px; height:7px; border-radius:999px; border:none; padding:0; cursor:pointer; background: {{ dot.bg }}"></button>
-                </sc-for>
-              </div>
-              <div style="display:flex; gap:14px">
-                <button type="button" onClick="{{ prev }}" aria-label="Назад" style="background:none; border:none; padding:0; cursor:pointer; font-size:18px; line-height:1; color:#8B6B4A; font-family:Cormorant, serif" style-hover="color:#1F1D1A">←</button>
-                <button type="button" onClick="{{ next }}" aria-label="Вперёд" style="background:none; border:none; padding:0; cursor:pointer; font-size:18px; line-height:1; color:#8B6B4A; font-family:Cormorant, serif" style-hover="color:#1F1D1A">→</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p style="font-family:Cormorant, serif; font-weight:300; font-style:italic; font-size:clamp(22px,2.2vw,30px); line-height:1.45; color:#33302B; margin:0; text-wrap:pretty">Технику иллюстраций выбираете вы.<br>На этапе согласования покажу, как будет выглядеть именно ваш герой.</p>
       </div>
     </div>
 
@@ -258,25 +269,7 @@
     </div>
   </section>
 
-  <section data-screen-label="Примеры сказок" style="max-width:1280px; margin:0 auto; padding:clamp(90px,13vw,190px) clamp(24px,5vw,72px) 0">
-    <h2 style="font-family:Cormorant, serif; font-weight:300; font-size:clamp(30px,3.3vw,48px); line-height:1.24; margin:0 0 clamp(40px,5vw,64px); max-width:20em; text-wrap:pretty">Примеры готовых сказок</h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:clamp(28px,3.5vw,52px)">
-      <figure style="margin:0">
-        <img src="assets/book-2d-sm.jpg" alt="Экспедиция шести камней" style="width:100%; height:auto; display:block">
-        <figcaption style="margin-top:20px; font-size:14px; line-height:1.6; color:#6E6759">Пример сказки для мальчика 8 лет<br><span style="color: rgb(167, 157, 140);">формат: 2D-иллюстрация</span></figcaption>
-      </figure>
-      <figure style="margin:0">
-        <img src="assets/book-3d-sm.jpg" alt="Зайка и Леночка" style="width:100%; height:auto; display:block">
-        <figcaption style="margin-top:20px; font-size:14px; line-height:1.6; color:#6E6759">Пример сказки для девочки 2 лет<br><span style="color: rgb(167, 157, 140);">формат: 3D-иллюстрация</span></figcaption>
-      </figure>
-      <figure style="margin:0">
-        <img src="assets/book-watercolor-sm.jpg" alt="Анечка и кот Василий" style="width:100%; height:auto; display:block">
-        <figcaption style="margin-top:20px; font-size:14px; line-height:1.6; color:#6E6759">Пример сказки для девочки 5 лет<br><span style="color: rgb(167, 157, 140);">формат: акварельный стиль</span></figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section data-screen-label="Цена и FAQ" style="max-width:1280px; margin:0 auto; padding:clamp(90px,13vw,190px) clamp(24px,5vw,72px) 0">
+  <section data-screen-label="Цена и FAQ" id="stoimost" style="max-width:1280px; margin:0 auto; padding:clamp(90px,13vw,190px) clamp(24px,5vw,72px) 0">
     <div style="display:flex; gap:22px; align-items:baseline; margin-bottom:48px">
       <span style="font-family:Cormorant, serif; font-size:15px; letter-spacing:0.2em; color:#B09371">06</span>
       <span style="font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:#8A8172">Стоимость</span>
@@ -294,9 +287,20 @@
           <li style="font-size:16px; line-height:1.7; color:#33302B; border-top:1px solid #E6DFD2; padding-top:18px">Иллюстрация героя и краткий сценарий с расшифровкой логики сказки на согласование</li>
           <li style="font-size:16px; line-height:1.7; color:#33302B; border-top:1px solid #E6DFD2; padding-top:18px">Правки по моим ошибкам и одна правка дизайна&nbsp;— бесплатно</li>
           <li style="font-size:16px; line-height:1.7; color:#33302B; border-top:1px solid #E6DFD2; padding-top:18px">Готовая книга в электронном виде</li>
-          <li style="font-size:16px; line-height:1.7; color:#33302B; border-top:1px solid #E6DFD2; padding-top:18px">Файл, готовый для типографии, и пошаговая инструкция, что сказать и на что смотреть при печати</li>
+          
         </ul>
         <p style="font-size:14px; line-height:1.8; color:#8A8172; margin:32px 0 0">Если после согласований вы полностью передумали (не ошибка с моей стороны, а смена сюжета, темы или иллюстраций)&nbsp;— новая работа оформляется как новый заказ, 7 500 ₽, потому что прорабатывается заново от и до.</p>
+      </div>
+    </div>
+
+    <div data-rg="2" style="display:grid; grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr); gap:clamp(40px,6vw,96px); align-items:start; border-top:1px solid #E6DFD2; margin-top:clamp(48px,6vw,80px); padding-top:clamp(48px,6vw,80px)">
+      <div>
+        <h3 style="font-family:Cormorant, serif; font-weight:300; font-size:clamp(24px,2.3vw,32px); line-height:1.3; margin:0 0 18px">Хотите бумажную книгу?</h3>
+        <p style="font-family: Cormorant, serif; font-weight: 300; font-size: clamp(46px,4.2vw,60px); line-height: 1; margin: 0">2 500 ₽</p>
+      </div>
+      <div>
+        <p style="font-size:16px; line-height:1.85; color:#33302B; margin:0 0 20px; max-width:40em">Электронная версия входит в стоимость сказки. <br>Если вы хотите держать книгу в руках&nbsp;— могу подготовить полноценное издание для типографии: дополнительные развороты сверх основной истории (фотоальбом с иллюстрациями, которых нет в самой сказке), вёрстку в формате, готовом для печати, и пошаговую инструкцию&nbsp;— что сказать в типографии и на что смотреть при приёмке.</p>
+        <p style="font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:#8A8172; margin:0">Заказывается дополнительно</p>
       </div>
     </div>
 
@@ -325,7 +329,7 @@
         </details>
         <details style="border-bottom:1px solid #E6DFD2">
           <summary style="font-family:Cormorant, serif; font-weight:300; font-size:clamp(21px,2vw,28px); line-height:1.4; padding:26px 0; color:#1F1D1A" style-hover="color:#8B6B4A">Можно ли распечатать книгу?</summary>
-          <p style="font-size:16px; line-height:1.85; color:#33302B; margin:0 0 28px; max-width:44em">Да. Присылаю файл, готовый для типографии, и пошаговую инструкцию&nbsp;— что сказать, что выбрать, на что посмотреть при приёмке. Подходит, даже если вы никогда этим не занимались.</p>
+          <p style="font-size:16px; line-height:1.85; color:#33302B; margin:0 0 28px; max-width:44em">Да. Это дополнительная платная услуга. Я присылаю файл, готовый для типографии, и пошаговую инструкцию&nbsp;— что сказать, что выбрать, на что посмотреть при приёмке. Подходит, даже если вы никогда этим не занимались.</p>
         </details>
         <details style="border-bottom:1px solid #E6DFD2">
           <summary style="font-family:Cormorant, serif; font-weight:300; font-size:clamp(21px,2vw,28px); line-height:1.4; padding:26px 0; color:#1F1D1A" style-hover="color:#8B6B4A">А если у ребёнка нет любимой игрушки?</summary>
@@ -345,7 +349,7 @@
 
   <section data-screen-label="Финальный CTA" style="max-width:1280px; margin:0 auto; padding:clamp(90px,13vw,190px) clamp(24px,5vw,72px) clamp(80px,10vw,140px); text-align:center">
     <h2 style="font-family:Cormorant, serif; font-weight:300; font-size:clamp(34px,4.4vw,66px); line-height:1.18; margin:0 auto 40px; max-width:24em; text-wrap:pretty">Да будет больше счастливых детей и их родителей!</h2>
-    <img src="assets/author-with-book.png" alt="Елена Розенберг с книгой «Умная сказка»" style="width:100%; max-width:340px; height:auto; display:block; margin:0 auto 40px">
+    <img src="assets/author-with-book.jpg" alt="Елена Розенберг с книгой «Умная сказка»" style="width:100%; max-width:340px; height:auto; display:block; margin:0 auto 40px">
     <p style="font-size:17px; line-height:1.8; color:#33302B; margin:0 auto 52px; max-width:32em">Напишите мне и мы вместе создадим сказку, которая станет особенной для вашего ребёнка</p>
     <div style="display:flex; flex-wrap:wrap; gap:36px; align-items:center; justify-content:center">
       <a href="https://t.me/Rozenberg_Elena" target="_blank" rel="noopener" style="font-size:13px; letter-spacing:0.19em; text-transform:uppercase; color:#8B6B4A; border-bottom:1px solid #8B6B4A; padding-bottom:7px" style-hover="color:#1F1D1A; border-bottom:1px solid #1F1D1A">Написать Елене</a>
@@ -359,44 +363,66 @@
       <div style="display:flex; flex-wrap:wrap; gap:28px">
         <a href="https://t.me/rozenberg_elena" target="_blank" rel="noopener" style="font-size:13px; color:#6E6759" style-hover="color:#1F1D1A">Telegram</a>
         <a href="https://www.instagram.com/rozenberg__elena/" target="_blank" rel="noopener" style="font-size:13px; color:#6E6759" style-hover="color:#1F1D1A">Instagram</a>
-        <a href="./Оферта.dc.html" style="font-size:13px; color:#6E6759" style-hover="color:#1F1D1A">Оферта</a>
-        <a href="./Политика данных.dc.html" style="font-size:13px; color:#6E6759" style-hover="color:#1F1D1A">Политика данных</a>
+        <a href="oferta.html" style="font-size:13px; color:#6E6759" style-hover="color:#1F1D1A">Оферта</a>
+        <a href="privacy.html" style="font-size:13px; color:#6E6759" style-hover="color:#1F1D1A">Политика данных</a>
       </div>
     </div>
   </footer>
 </div>
-
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  state = { i: 0 };
-  captions = ['Исходное фото', 'Акварельный стиль', '3D-иллюстрация', '2D-иллюстрация'];
-  go = (n) => this.setState({ i: (n + 4) % 4 });
-  touchX = null;
-  onTouchStart = (e) => { this.touchX = e.touches[0].clientX; };
-  onTouchEnd = (e) => {
-    if (this.touchX === null) return;
-    const dx = e.changedTouches[0].clientX - this.touchX;
-    if (Math.abs(dx) > 40) this.go(this.state.i + (dx < 0 ? 1 : -1));
-    this.touchX = null;
-  };
-  renderVals() {
-    const i = this.state.i;
-    return {
-      track: 'translateX(' + (-i * 100) + '%)',
-      caption: this.captions[i],
-      onTouchStart: this.onTouchStart,
-      onTouchEnd: this.onTouchEnd,
-      prev: () => this.go(i - 1),
-      next: () => this.go(i + 1),
-      dots: [0, 1, 2, 3].map((n) => ({
-        on: () => this.go(n),
-        bg: n === i ? '#8B6B4A' : 'rgba(31,29,26,0.16)'
-      }))
-    };
-  }
-}
-
+<script>
+document.querySelectorAll('[style-hover]').forEach(function(el){
+  var hoverStyle = el.getAttribute('style-hover');
+  var originalStyle = el.getAttribute('style') || '';
+  el.addEventListener('mouseenter', function(){ el.setAttribute('style', originalStyle + ';' + hoverStyle); });
+  el.addEventListener('mouseleave', function(){ el.setAttribute('style', originalStyle); });
+});
 </script>
+
+<script>
+(function(){
+  var captions = ['Исходное фото', 'Акварельный стиль', '3D-иллюстрация', '2D-иллюстрация'];
+  var i = 0;
+  var track = document.getElementById('boy-carousel-track');
+  var captionEl = document.getElementById('boy-carousel-caption');
+  var dotsEl = document.getElementById('boy-carousel-dots');
+  var container = document.getElementById('boy-carousel');
+  if (!track) return;
+
+  function render(){
+    track.style.transform = 'translateX(' + (-i * 100) + '%)';
+    captionEl.textContent = captions[i];
+    dotsEl.querySelectorAll('button').forEach(function(btn, n){
+      btn.style.background = (n === i) ? '#8B6B4A' : 'rgba(31,29,26,0.16)';
+    });
+  }
+  function go(n){ i = (n + 4) % 4; render(); }
+
+  for (var n = 0; n < 4; n++){
+    (function(n){
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Кадр');
+      dot.style.cssText = 'width:7px; height:7px; border-radius:999px; border:none; padding:0; cursor:pointer; background: rgba(31,29,26,0.16)';
+      dot.addEventListener('click', function(){ go(n); });
+      dotsEl.appendChild(dot);
+    })(n);
+  }
+
+  document.getElementById('boy-carousel-prev').addEventListener('click', function(){ go(i - 1); });
+  document.getElementById('boy-carousel-next').addEventListener('click', function(){ go(i + 1); });
+
+  var touchX = null;
+  container.addEventListener('touchstart', function(e){ touchX = e.touches[0].clientX; });
+  container.addEventListener('touchend', function(e){
+    if (touchX === null) return;
+    var dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 40) go(i + (dx < 0 ? 1 : -1));
+    touchX = null;
+  });
+
+  render();
+})();
+</script>
+
 </body>
 </html>
