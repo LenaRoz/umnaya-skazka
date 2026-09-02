@@ -192,19 +192,22 @@
 
     <div style="border-top:1px solid #E6DFD2; padding-top:clamp(48px,6vw,80px); margin-bottom:clamp(48px,6vw,80px)">
       <h2 style="font-family:Cormorant, serif; font-weight:300; font-size:clamp(30px,3.3vw,48px); line-height:1.24; margin:0 0 clamp(40px,5vw,64px); max-width:20em; text-wrap:pretty">Примеры готовых сказок</h2>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:clamp(28px,3.5vw,52px)">
-        <figure style="margin:0">
-          <img src="assets/book-2d-sm.jpg" alt="Экспедиция шести камней" style="width:100%; height:auto; display:block">
-          <figcaption style="margin-top:20px; font-size:14px; line-height:1.6; color:#6E6759">Пример сказки для мальчика 8 лет<br><span style="color: rgb(167, 157, 140);">формат: 2D-иллюстрация</span></figcaption>
-        </figure>
-        <figure style="margin:0">
-          <img src="assets/book-3d-sm.jpg" alt="Зайка и Леночка" style="width:100%; height:auto; display:block">
-          <figcaption style="margin-top:20px; font-size:14px; line-height:1.6; color:#6E6759">Пример сказки для девочки 2 лет<br><span style="color: rgb(167, 157, 140);">формат: 3D-иллюстрация</span></figcaption>
-        </figure>
-        <figure style="margin:0">
-          <img src="assets/book-watercolor-sm.jpg" alt="Анечка и кот Василий" style="width:100%; height:auto; display:block">
-          <figcaption style="margin-top:20px; font-size:14px; line-height:1.6; color:#6E6759">Пример сказки для девочки 5 лет<br><span style="color: rgb(167, 157, 140);">формат: акварельный стиль</span></figcaption>
-        </figure>
+      <div id="books-carousel" style="position:relative; overflow:hidden; background:#F1ECE3; max-width:480px">
+        <div id="books-carousel-track" style="display:flex; width:100%; transition:transform 620ms cubic-bezier(0.4,0,0.2,1); transform: translateX(0%)">
+          <img src="assets/book-2d-sm.jpg" alt="Экспедиция шести камней" style="min-width:100%; aspect-ratio:3/4; object-fit:cover; display:block">
+          <img src="assets/book-3d-sm.jpg" alt="Зайка и Леночка" style="min-width:100%; aspect-ratio:3/4; object-fit:cover; display:block">
+          <img src="assets/book-watercolor-sm.jpg" alt="Анечка и кот Василий" style="min-width:100%; aspect-ratio:3/4; object-fit:cover; display:block">
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:24px; margin-top:24px; max-width:480px">
+        <span id="books-carousel-caption" style="font-size:14px; line-height:1.6; color:#6E6759">Пример сказки для мальчика 8 лет · формат: 2D-иллюстрация</span>
+        <div style="display:flex; align-items:center; gap:22px; flex:none">
+          <div id="books-carousel-dots" style="display:flex; gap:9px"></div>
+          <div style="display:flex; gap:14px">
+            <button type="button" id="books-carousel-prev" aria-label="Назад" style="background:none; border:none; padding:0; cursor:pointer; font-size:18px; line-height:1; color:#8B6B4A; font-family:Cormorant, serif" style-hover="color:#1F1D1A">←</button>
+            <button type="button" id="books-carousel-next" aria-label="Вперёд" style="background:none; border:none; padding:0; cursor:pointer; font-size:18px; line-height:1; color:#8B6B4A; font-family:Cormorant, serif" style-hover="color:#1F1D1A">→</button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -345,7 +348,7 @@
 
   <section data-screen-label="Тизер форматов" style="max-width:1280px; margin:0 auto; padding:clamp(90px,12vw,170px) clamp(24px,5vw,72px) 0">
     
-  <p style="font-family: Cormorant, serif; font-weight: 300; font-style: italic; font-size: clamp(24px,2.6vw,36px); line-height: 1.5; color: #8A8172; margin: 0 auto; max-width: 26em; text-wrap: pretty; text-align: center; text-transform: none; width: 799px; height: 107px">Скоро "в эфире": аудиоверсии книг, сказки для внутреннего ребёнка взрослых, подарочные книги для любого возраста, юморные и трогательные лав стори.</p></section>
+  <p style="font-family: Cormorant, serif; font-weight: 300; font-style: italic; font-size: clamp(24px,2.6vw,36px); line-height: 1.5; color: #8A8172; margin: 0 auto; max-width: 26em; text-wrap: pretty; text-align: center; text-transform: none; width: 100%">Скоро "в эфире": аудиоверсии книг, сказки для внутреннего ребёнка взрослых, подарочные книги для любого возраста, юморные и трогательные лав стори.</p></section>
 
   <section data-screen-label="Финальный CTA" style="max-width:1280px; margin:0 auto; padding:clamp(90px,13vw,190px) clamp(24px,5vw,72px) clamp(80px,10vw,140px); text-align:center">
     <h2 style="font-family:Cormorant, serif; font-weight:300; font-size:clamp(34px,4.4vw,66px); line-height:1.18; margin:0 auto 40px; max-width:24em; text-wrap:pretty">Да будет больше счастливых детей и их родителей!</h2>
@@ -410,6 +413,57 @@ document.querySelectorAll('[style-hover]').forEach(function(el){
 
   document.getElementById('boy-carousel-prev').addEventListener('click', function(){ go(i - 1); });
   document.getElementById('boy-carousel-next').addEventListener('click', function(){ go(i + 1); });
+
+  var touchX = null;
+  container.addEventListener('touchstart', function(e){ touchX = e.touches[0].clientX; });
+  container.addEventListener('touchend', function(e){
+    if (touchX === null) return;
+    var dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 40) go(i + (dx < 0 ? 1 : -1));
+    touchX = null;
+  });
+
+  render();
+})();
+</script>
+
+
+<script>
+(function(){
+  var captions = [
+    'Пример сказки для мальчика 8 лет · формат: 2D-иллюстрация',
+    'Пример сказки для девочки 2 лет · формат: 3D-иллюстрация',
+    'Пример сказки для девочки 5 лет · формат: акварельный стиль'
+  ];
+  var i = 0;
+  var track = document.getElementById('books-carousel-track');
+  var captionEl = document.getElementById('books-carousel-caption');
+  var dotsEl = document.getElementById('books-carousel-dots');
+  var container = document.getElementById('books-carousel');
+  if (!track) return;
+
+  function render(){
+    track.style.transform = 'translateX(' + (-i * 100) + '%)';
+    captionEl.textContent = captions[i];
+    dotsEl.querySelectorAll('button').forEach(function(btn, n){
+      btn.style.background = (n === i) ? '#8B6B4A' : 'rgba(31,29,26,0.16)';
+    });
+  }
+  function go(n){ i = (n + 3) % 3; render(); }
+
+  for (var n = 0; n < 3; n++){
+    (function(n){
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Кадр');
+      dot.style.cssText = 'width:7px; height:7px; border-radius:999px; border:none; padding:0; cursor:pointer; background: rgba(31,29,26,0.16)';
+      dot.addEventListener('click', function(){ go(n); });
+      dotsEl.appendChild(dot);
+    })(n);
+  }
+
+  document.getElementById('books-carousel-prev').addEventListener('click', function(){ go(i - 1); });
+  document.getElementById('books-carousel-next').addEventListener('click', function(){ go(i + 1); });
 
   var touchX = null;
   container.addEventListener('touchstart', function(e){ touchX = e.touches[0].clientX; });
