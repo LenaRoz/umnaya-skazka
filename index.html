@@ -17,6 +17,8 @@
   img, video { max-width: 100%; }
   @media (max-width: 720px) {
     [data-rg="2"] { grid-template-columns: 1fr !important; }
+    .hero-img-mobile { display: block !important; }
+    .hero-img-desktop { display: none !important; }
   }
 </style>
 </head>
@@ -30,6 +32,7 @@
   <section data-screen-label="Hero" data-rg="2" style="max-width:1280px; margin:0 auto; padding:clamp(60px,9vw,130px) clamp(24px,5vw,72px) 0; display:grid; grid-template-columns:minmax(320px,1fr) minmax(300px,0.82fr); gap:clamp(40px,6vw,96px); align-items:center">
     <div>
       <h1 style="font-family:Cormorant, serif; font-weight:300; font-size:clamp(38px,4.4vw,66px); line-height:1.14; letter-spacing:-0.005em; margin:0 0 32px; text-wrap:pretty">Когда вашему ребёнку трудно&nbsp;— я пишу для него сказку, которая <span style="font-style:italic; color:#8B6B4A">помогает</span></h1>
+      <img src="child_holding_and_opening_book_202608311-mtgzgefr-n3pc.jpg" alt="Ребёнок держит книгу «Зайка и Леночка»" class="hero-img-mobile" style="display:none; width:100%; height:auto; margin:0 0 32px; border-radius:2px">
       <p style="font-size:17px; line-height:1.75; font-weight:300; margin:0 0 40px; max-width:30em; color:#33302B; text-wrap:pretty">Это не просто красивое развлечение, а терапевтический инструмент, созданный мной лично под вашу ситуацию.</p>
       <ul style="list-style:none; margin:0 0 46px; padding:0; display:grid; gap:11px; max-width:34em">
         <li style="font-size:14px; line-height:1.5; color:#6E6759; display:flex; gap:12px"><span style="color: rgb(185, 168, 145);">—</span>Если не хочет расставаться с мамой в саду или школе</li>
@@ -42,7 +45,7 @@
         <a href="https://t.me/umnaya_skazka_bot" target="_blank" rel="noopener" style="font-size:13px; letter-spacing:0.19em; text-transform:uppercase; color:#6E6759; border-bottom:1px solid rgba(110,103,89,0.35); padding-bottom:7px" style-hover="color:#1F1D1A; border-bottom:1px solid #1F1D1A">Сразу перейти в бот</a>
       </div>
     </div>
-    <img src="child_holding_and_opening_book_202608311-mtgzgefr-n3pc.jpg" alt="Обложка книги «Анечка и кот Василий»" style="width:100%; height:auto; display:block">
+    <img src="child_holding_and_opening_book_202608311-mtgzgefr-n3pc.jpg" alt="Ребёнок держит книгу «Зайка и Леночка»" class="hero-img-desktop" style="width:100%; height:auto; display:block">
   </section>
 
   <section data-screen-label="Личная история" style="max-width:1280px; margin:0 auto; padding:clamp(90px,13vw,190px) clamp(24px,5vw,72px) 0">
