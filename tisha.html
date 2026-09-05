@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лисёнок Тиша и особенный жёлудь — Умная сказка</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #FBF3E7;
+    --ink: #3A2A1E;
+    --accent: #C0703C;
+    --rule: rgba(58,42,30,0.14);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Manrope', sans-serif;
+    font-weight:300;
+    line-height:1.7;
+  }
+  h1,h2{ font-family:'Cormorant', serif; font-weight:500; }
+  a{ color:var(--accent); text-decoration:none; }
+  a:hover{ color:var(--ink); }
+  img{ max-width:100%; display:block; }
+
+  header{
+    text-align:center; padding:clamp(48px,8vw,90px) 24px clamp(24px,4vw,40px);
+    max-width:700px; margin:0 auto;
+  }
+  .eyebrow{
+    font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent);
+    margin-bottom:20px; display:block;
+  }
+  h1{ font-size:clamp(32px,5vw,52px); line-height:1.15; margin-bottom:20px; }
+  .subtitle{ font-family:'Cormorant', serif; font-style:italic; font-size:20px; color:#6E5A45; margin-bottom:8px; }
+  .age{ font-size:14px; color:#8A7460; letter-spacing:0.05em; }
+
+  .book-viewer{
+    max-width:640px; margin:0 auto; padding:0 24px 20px;
+  }
+  .page-frame{
+    border-radius:6px; overflow:hidden; box-shadow:0 24px 50px rgba(58,42,30,0.18);
+    border:1px solid var(--rule);
+  }
+  .controls{
+    display:flex; align-items:center; justify-content:center; gap:28px; margin-top:24px;
+  }
+  .controls button{
+    background:none; border:1px solid var(--rule); color:var(--accent);
+    width:44px; height:44px; border-radius:50%; font-size:18px; cursor:pointer;
+    font-family:'Cormorant', serif;
+  }
+  .controls button:hover{ background:var(--accent); color:var(--paper); border-color:var(--accent); }
+  .controls button:disabled{ opacity:0.3; cursor:default; background:none; color:var(--accent); border-color:var(--rule); }
+  #page-indicator{ font-size:14px; color:#8A7460; min-width:70px; text-align:center; }
+
+  .download{
+    text-align:center; margin:40px 0 10px;
+  }
+  .download a{
+    display:inline-block; border:1px solid var(--accent); color:var(--accent);
+    padding:14px 32px; border-radius:40px; font-size:14px; letter-spacing:0.04em;
+  }
+  .download a:hover{ background:var(--accent); color:var(--paper); }
+
+  .cta{
+    max-width:520px; margin:clamp(60px,8vw,100px) auto 0; text-align:center;
+    padding:0 24px clamp(60px,8vw,100px);
+  }
+  .cta-acorn{ font-size:28px; margin-bottom:18px; }
+  .cta h2{ font-size:clamp(24px,3vw,30px); margin-bottom:18px; }
+  .cta p{ font-size:16px; color:#5C4A38; margin-bottom:32px; }
+  .cta-buttons{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+  .btn-solid{
+    background:var(--accent); color:var(--paper); padding:15px 30px; border-radius:40px;
+    font-weight:600; font-size:15px;
+  }
+  .btn-solid:hover{ background:var(--ink); color:var(--paper); }
+  .btn-outline{
+    border:1px solid var(--accent); color:var(--accent); padding:15px 30px; border-radius:40px;
+    font-size:15px;
+  }
+  .btn-outline:hover{ background:var(--accent); color:var(--paper); }
+
+  footer{
+    text-align:center; padding:40px 24px 60px; font-size:13px; color:#8A7460;
+  }
+  footer a{ margin:0 8px; }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="eyebrow">Умная сказка · бесплатная сказка</span>
+  <h1>Лисёнок Тиша и особенный жёлудь</h1>
+  <p class="subtitle">Терапевтическая сказка для адаптации к садику</p>
+  <p class="age">от 2,5 до 6 лет</p>
+</header>
+
+<div class="book-viewer">
+  <div class="page-frame">
+    <img id="book-page" src="book-assets/page-1.jpg" alt="Страница книги">
+  </div>
+  <div class="controls">
+    <button id="prev-btn" aria-label="Предыдущая страница">←</button>
+    <span id="page-indicator">1 / 8</span>
+    <button id="next-btn" aria-label="Следующая страница">→</button>
+  </div>
+  <div class="download">
+    <a href="book-assets/tisha-book.pdf" download>Скачать книгу в PDF</a>
+  </div>
+</div>
+
+<div class="cta">
+  <div class="cta-acorn">🌰</div>
+  <h2>Сказка — для вашего ребёнка</h2>
+  <p>Эта сказка — подарок для всех, кто сейчас переживает первые дни в садике или собирается туда пойти. А если вашему ребёнку нужна такая же история, но с ним самим в главной роли и под его собственную ситуацию — я с радостью напишу её специально для вас.</p>
+  <div class="cta-buttons">
+    <a href="https://t.me/Rozenberg_Elena" class="btn-solid">Написать Елене</a>
+    <a href="https://t.me/umnaya_skazka_bot" class="btn-outline">Перейти в бот</a>
+  </div>
+</div>
+
+<footer>
+  Умная сказка · терапевтические истории для детей
+  <br><br>
+  <a href="index.html">На главную</a>
+  <a href="oferta.html">Оферта</a>
+  <a href="privacy.html">Политика данных</a>
+</footer>
+
+<script>
+  const totalPages = 8;
+  let current = 1;
+  const img = document.getElementById('book-page');
+  const indicator = document.getElementById('page-indicator');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+
+  function render(){
+    img.src = 'book-assets/page-' + current + '.jpg';
+    indicator.textContent = current + ' / ' + totalPages;
+    prevBtn.disabled = current === 1;
+    nextBtn.disabled = current === totalPages;
+  }
+
+  prevBtn.addEventListener('click', () => { if(current > 1){ current--; render(); } });
+  nextBtn.addEventListener('click', () => { if(current < totalPages){ current++; render(); } });
+
+  let touchX = null;
+  document.querySelector('.book-viewer').addEventListener('touchstart', e => { touchX = e.touches[0].clientX; });
+  document.querySelector('.book-viewer').addEventListener('touchend', e => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 40) {
+      if (dx < 0 && current < totalPages) { current++; render(); }
+      if (dx > 0 && current > 1) { current--; render(); }
+    }
+    touchX = null;
+  });
+
+  render();
+</script>
+
+</body>
+</html>
