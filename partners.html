@@ -39,6 +39,19 @@
   .number-card .num{ font-family:'Cormorant', serif; font-size:clamp(40px,5vw,56px); color:var(--accent); line-height:1; }
   .number-card .label{ font-size:14px; color:#5C5648; margin-top:10px; }
 
+  .formats{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:28px;
+    margin:clamp(60px,8vw,100px) 0;
+  }
+  .format-card{ border:1px solid var(--rule); border-radius:20px; padding:clamp(28px,4vw,36px) clamp(24px,3vw,32px); }
+  .format-card h3{ font-size:clamp(21px,2.2vw,25px); margin-bottom:14px; }
+  .format-card p{ font-size:15px; color:#33302B; margin-bottom:12px; }
+  .format-card ul{ list-style:none; margin:14px 0; display:grid; gap:8px; }
+  .format-card li{ padding-left:20px; position:relative; font-size:14px; color:#33302B; }
+  .format-card li::before{ content:"—"; position:absolute; left:0; color:var(--accent); }
+  .format-note{ font-size:13px; color:#8A8172; margin-top:14px; line-height:1.6; }
+  .format-note a{ border-bottom:1px solid var(--accent); }
+
   .steps{ margin:clamp(60px,8vw,100px) 0; }
   .step{ display:grid; grid-template-columns:56px 1fr; gap:20px; padding:26px 0; border-top:1px solid var(--rule); }
   .step:last-child{ border-bottom:1px solid var(--rule); }
@@ -97,8 +110,24 @@
   </div>
 </section>
 
-<section style="max-width:700px; margin:0 auto clamp(50px,7vw,80px); text-align:center;">
-  <p style="font-size:16px; color:#5C5648;">Книгу делаю под вашего ребёнка или подходящий пример из вашей практики, а взамен прошу рассказать о впечатлениях в посте, рилсе или сторис.</p>
+<section class="formats">
+  <div class="format-card">
+    <h3>Персональная книга по бартеру</h3>
+    <p>Делаю именную книгу под вашего ребёнка или подходящий пример из вашей практики, бесплатно.</p>
+    <p>Взамен прошу в течение 14 дней после получения книги опубликовать:</p>
+    <ul>
+      <li>Stories с вашими впечатлениями и впечатлениями ребёнка</li>
+      <li>пост или видео, смотря какой формат вы обычно ведёте</li>
+    </ul>
+    <p>В публикациях важны настоящие фото или развороты именно из вашей книги, не случайные картинки из интернета.</p>
+    <p class="format-note">Если не успеете опубликовать в срок, книгу нужно будет оплатить по полной цене. Полные условия в <a href="partners-oferta.html">оферте для партнёров</a>.</p>
+  </div>
+  <div class="format-card">
+    <h3>Промокод без книги</h3>
+    <p>Если персональная книга сейчас не нужна, просто получаете промокод, без обязательств по публикациям.</p>
+    <p>По желанию могу прислать готовые рекламные материалы, шаблоны сторис и постов, которые можно сразу разместить у себя.</p>
+    <p>Комиссия начисляется так же: 15% с каждой продажи по вашему коду, без ограничений по количеству.</p>
+  </div>
 </section>
 
 <section class="steps">
@@ -146,8 +175,9 @@
 
 <section class="cta">
   <h2>Готовы попробовать?</h2>
-  <p>Напишите мне в Telegram - расскажу подробнее и пришлю ваш личный промокод.</p>
+  <p>Напишите мне в Telegram - расскажу подробнее, предложу подходящий формат и пришлю ваш личный промокод.</p>
   <a href="https://t.me/Rozenberg_Elena" target="_blank" rel="noopener">Написать Елене</a>
+  <p style="font-size:12px; color:rgba(250,248,244,0.55); margin-top:24px;">Получая промокод, вы принимаете условия <a href="partners-oferta.html" style="color:rgba(250,248,244,0.75); border-bottom:1px solid rgba(250,248,244,0.4);">оферты для партнёров</a></p>
 </section>
 
 <section class="faq">
@@ -180,7 +210,17 @@
 
   <details>
     <summary>Правда, что можно получить книгу бесплатно?</summary>
-    <p>Да. Дарю вам именную книгу под вашего ребёнка или под подходящий пример из вашей практики, чтобы вы сами увидели, как это работает. Взамен прошу рассказать о своих впечатлениях в посте, рилсе или сторис, как вам удобнее.</p>
+    <p>Да, в формате «Персональная книга по бартеру». Взамен нужно опубликовать Stories и пост или видео с настоящими впечатлениями и фото из своей книги в течение 14 дней после получения.</p>
+  </details>
+
+  <details>
+    <summary>Что если я не успею опубликовать вовремя?</summary>
+    <p>Тогда книгу нужно будет оплатить по полной стоимости. Если чувствуете, что можете не успеть, проще сразу выбрать формат «Промокод без книги», там никаких обязательств по срокам нет.</p>
+  </details>
+
+  <details>
+    <summary>У меня нет своего ребёнка, могу я всё равно получить книгу?</summary>
+    <p>Да, если вы специалист, могу сделать книгу под подходящий пример из вашей практики. Если такого случая нет, выбирайте формат просто с промокодом.</p>
   </details>
 
   <details>
@@ -193,6 +233,7 @@
   Умная сказка · персональные истории для детей
   <br><br>
   <a href="index.html">На главную</a>
+  <a href="partners-oferta.html">Оферта для партнёров</a>
   <a href="oferta.html">Оферта</a>
   <a href="privacy.html">Политика данных</a>
 </footer>
